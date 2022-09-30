@@ -1,5 +1,6 @@
 package Proyecto_Datos_1.src.Inicio_Sesión;
 
+import Proyecto_Datos_1.src.Canciones;
 import Proyecto_Datos_1.src.General.Libreria;
 
 import javax.swing.*;
@@ -60,6 +61,11 @@ public class GUImain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 tabbedPane1.setVisible(false);
+
+
+                Canciones mainFrame = new Canciones();
+
+                setVisible(false);
             }
         });
     }
