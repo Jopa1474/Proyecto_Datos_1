@@ -4,6 +4,7 @@ package Proyecto_Datos_1.src.Inicio_Sesión;
 /**
  * Es una lista enlazada en la cu[al podemos agregar diferentes objetos
  * @param <T> Es el objeto que queremos meter en la lista
+ * @autor https://www.digitalocean.com/community/tutorials/java-linkedlist-linkedlist-java
  */
 public class Lista<T> {
     public Nodo<T> head;
