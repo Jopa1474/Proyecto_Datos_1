@@ -9,6 +9,7 @@ import java.io.File;
 
 /**
  * Clase para la ventana en la que estan las canciones
+ * @author https://stackoverflow.com/questions/40577425/jaco-mp3-player. en lo que a reproduccion de canciones se refiere
  */
 public class Canciones extends JFrame{
     private JList ListaCanciones;
