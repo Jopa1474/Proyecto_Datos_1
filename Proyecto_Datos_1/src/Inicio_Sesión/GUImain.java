@@ -50,7 +50,7 @@ public class GUImain extends JFrame{
                 Libreria tmpLibrary = new Libreria(txtCreador.getText(),textNombreLibreria.getText());
                 if(tmpLibrary.LibreriaValida()){
                     libreria.addNodo(tmpLibrary);
-                    libreria.printList();
+
                 }
                 refresh(libreria);
                 textNombreLibreria.setText("");

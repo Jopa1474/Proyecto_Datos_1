@@ -6,9 +6,10 @@ import Proyecto_Datos_1.src.Inicio_Sesión.Usuario;
 
 public class Main {
     public static void main(String[] args){
-        Lista<Usuario> test = new Lista<>();
-        test.addNodo(new Usuario("test", "123"));
+        Lista<Usuario> user = new Lista<>();
+        user.addNodo(new Usuario("test", "123"));
+        user.addNodo(new Usuario("CR7", "777"));
         Login loginFrame = new Login();
-        loginFrame.setUsuario(test);
+        loginFrame.setUsuario(user);
     }
 }

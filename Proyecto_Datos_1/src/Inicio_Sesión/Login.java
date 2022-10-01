@@ -22,7 +22,7 @@ public class Login extends JFrame{
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("User: " + txtUsuario.getText());
+                System.out.println("Usuario: " + txtUsuario.getText());
                 usuarios.reset();
                 Nodo<Usuario> tmp = usuarios.getNodo();
                 while(tmp != null){
