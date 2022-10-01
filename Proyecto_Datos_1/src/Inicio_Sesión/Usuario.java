@@ -17,15 +17,29 @@ public class Usuario {
         contraseña = _contraseña;
     }
 
-
+    /**
+     * Imprime el usuario
+     * @return Imprime en la consola Usuario + usuario + contraseña
+     */
 
     public String toString(){
-        return ("Usuario \n \t User: " + usuario + "\n \t  Password: " + contraseña);
+        return ("Usuario \n \t Usuario: " + usuario + "\n \t  Password: " + contraseña);
     }
 
+    /**
+     * Metodo para validar que los datos del usuario sean válidos
+     * @param _user El nombre de usuario
+     * @param _password La contraseña del usuario
+     * @return Si el usuario es igual a _user y se la contraseña es igual a _contraseña
+     */
     public boolean validarDatos(String _user, String _password){
         return usuario.equals(_user) && contraseña.equals(_password);
     }
+
+    /**
+     * Metodo para obtener un usuario
+     * @return Retorna el usuario
+     */
     public String getUsuario(){
         return usuario;
     }

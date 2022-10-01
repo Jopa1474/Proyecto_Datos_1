@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Clase encargada de la creacion de la segunda ventana en la cual van a estar las librerias
+ */
 public class GUImain extends JFrame{
 
     public Lista<Libreria> libreria = new Lista<>();
@@ -22,11 +25,19 @@ public class GUImain extends JFrame{
     private JButton btnCancelar;
     private JPanel MainPanel;
     private JLabel mainUsuario;
+    private JButton openLibreriabtn;
 
+    /**
+     * Metodo para obtener el usuario
+     * @param _user El usuario
+     */
     public void getUsuario(String _user){
         mainUsuario.setText(_user);
     }
 
+    /**
+     * Metodo constructor de GUImain
+     */
     public GUImain(){
         setContentPane(MainPanel);
         setTitle("Main");
@@ -35,7 +46,14 @@ public class GUImain extends JFrame{
         setVisible(true);
         tabbedPane1.setVisible(false);
 
+        /**
+         * Boton para añadir librerias
+         */
         addLibreriaButton.addActionListener(new ActionListener() {
+            /**
+             * Metodo que se ejecuta al presionar el boton, el cual en este caso abre una ventana en la cual se pueden agregar los datos para la libreria que deseamos agregar
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 tabbedPane1.setVisible(true);
@@ -44,7 +62,14 @@ public class GUImain extends JFrame{
             }
         });
 
+        /**
+         * Boton para crear libreria
+         */
         btnCrear.addActionListener(new ActionListener() {
+            /**
+             * A lla hora de presionar el boton, la libreria se agrega en una lista
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 Libreria tmpLibrary = new Libreria(txtCreador.getText(),textNombreLibreria.getText());
@@ -57,18 +82,34 @@ public class GUImain extends JFrame{
                 tabbedPane1.setVisible(false);
             }
         });
+        /**
+         * Boton para cancelar la creacion de la libreria
+         */
         btnCancelar.addActionListener(new ActionListener() {
+            /**
+             * A la hora de estripar el boton, se cierra la ventana para crear libreria
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 tabbedPane1.setVisible(false);
 
-
-                Canciones mainFrame = new Canciones();
-
+            }
+        });
+        openLibreriabtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Canciones songFrame = new Canciones();
                 setVisible(false);
             }
         });
     }
+
+
+    /**
+     * Metodo para refrescar la lista libreria
+     * @param _libreria
+     */
     private void refresh(Lista<Libreria> _libreria){
         _libreria.reset();
         listModel.clear();
